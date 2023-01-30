@@ -79,8 +79,8 @@ export default {
   methods: {
     getSongs:  function () {
       this.loading = true
+      
       const params = {
-        // artistName: 'Juan Gabriel'
         artistName: this.search
       }
 
