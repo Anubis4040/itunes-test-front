@@ -4,7 +4,7 @@ El siguiente proyecto es un buscador de canciones que se encuentren en la librer
 
 ## Dependencias
 
- - Nodejs 12 o superior
+- Npm
 
 ## Instrucciones 
 
