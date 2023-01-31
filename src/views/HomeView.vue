@@ -5,7 +5,7 @@
       <v-text-field
         class="mr-5"
         label="Artisa o Banda Musical"
-        placeholder="Ingresa el nombre"
+        placeholder="Ingresa un nombre"
         filled
         background-color="white"
         hide-details=true
@@ -79,19 +79,18 @@ export default {
   methods: {
     getSongs:  function () {
       this.loading = true
-      
+
       const params = {
         artistName: this.search
       }
 
       axios.get(
-        'http://localhost:3000/songs',
+        `${process.env.VUE_APP_ITUNES_API_URL}/songs`,
         {
           params
         }
       )
       .then((response) => {
-        console.log(response.data, 'songs')
         this.songs = response.data
         this.loading = false
       })
